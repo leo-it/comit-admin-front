@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>pelisplus-admin-edit</title>
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+        <div class="container-fluid d-flex flex-row-reverse bd-highlight">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse row " id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item  col-lg-3 ">
+                   </li>
+                    <div class="container"></div>
+                    <li class="nav-item logged-in " style="width: 200px;">
+                        <a class="nav-link" href="../../index.html" id="logout">Admin</a>
+                    </li>
+                    <li class="nav-item logged-in " style="width: 200px;">
+                        <a class="nav-link" href="/assets/html/edit-delete.html" id="logout">edit-delete</a>
+                    </li>
+                    <li class="nav-item logged-in " style="width: 200px;">
+                        <a class="nav-link" href="/assets/html/upload.html" id="logout">Upload</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!----------------------------------->   
+    <div class=" pb-5 pt-3">
+        <h3 class=" text-center">Trailers</h3>
+        <div class="bg-light" id="movi">
+        </div>
+    </div>
+</div>
+     <!----------------------------------->
+    <!--FOOter-->
+    <footer class="container-fluid border">
+        <div class="row">
+            <div class="col-lg-6 p-3 text-center">
+                <h3 class="text-light  text-center">PelisPlus</h3>
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Hacenos una sugerencia
+          </button>
+         -->
+            </div>
+            <div class="col-lg-6 text-center text-light p-3">
+                <h4>seguinos</h4>
+                <i class="fab fa-facebook-f text-light p-3"></i>
+                <i class="fab fa-twitter text-light"></i>
+            </div>
+        </div>
+
+
+
+    </footer>
+
+
+    <!--scripts-JS-------------------------------->
+
+    <script type="module" src="../index.js"></script>
+
+</body>
+
+</html>

@@ -20,17 +20,21 @@
             <div class="collapse navbar-collapse row " id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item  col-lg-3 ">
-                      <!--  <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/index.html">pelisplus</a>
-                                -->
+           
                     </li>
                     <div class="container"></div>
                     <li class="nav-item logged-in " style="width: 200px;">
-                        <a class="nav-link" href="#" id="logout">Trailers</a>
+                        <a class="nav-link" href="index.html" id="logout">Admin</a>
                     </li>
                     <li class="nav-item logged-in " style="width: 200px;">
-                        <a class="nav-link" href="#" id="logout">Subir Trailer</a>
+                        <a class="nav-link" href="/assets/html/edit-delete.html" id="logout">edit</a>
                     </li>
-
+                    <li class="nav-item logged-in " style="width: 200px;">
+                        <a class="nav-link" href="/assets/html/upload.html" id="logout">Upload</a>
+                    </li>
+                    <li class="nav-item logged-in " style="width: 200px;">
+                        <a class="nav-link" href="/assets/html/upload.html" id="logout">foro</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -61,48 +65,6 @@
             </div>
         </div>
     </div>
-
-    <div class="pb-5"> </div>
-    <div class="container">
-        <h3 class="  pt-3 text-center ">Cargar Trailer</h3>
-        <form action="" class="logged-in row col-lg-12 align-items-center formularioPost">
-            <div class="container-fluid mt-5 ">
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Titulo</label>
-                    <input type="text" name="title" class="form-control " id="title-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Genero</label>
-                    <input type="text" name="gender" class="form-control " id="gender-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Year</label>
-                    <input type="number" name="year" class="form-control " id="year-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">descripcion</label>
-                    <textarea class="form-control" name="description" id="description-admin" rows="3" required placeholder=""></textarea>
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Url img</label>
-                    <input type="text" name="img" class="form-control " id="img-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Url video</label>
-                    <input type="text" name="url" class="form-control " id="url-admin" required placeholder="">
-                </div>
-                <button type="submit" class="btn btn-secondary" id="botonAdmin">Publicar</button>
-            </div>
-        </form>
-        <!--FORMULARIO-->
-        <!--div con comentarios que traigo de mongodb-->
-        <div class=" pb-5 pt-3">
-            <h3 class=" text-center">Trailers</h3>
-            <div class="bg-light" id="movi">
-            </div>
-        </div>
-    </div>
-
     <!--FOOter-->
     <footer class="container-fluid border">
         <div class="row">
