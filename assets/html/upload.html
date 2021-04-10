@@ -14,139 +14,156 @@
 
 <body>
     <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
-        <div class="container-fluid d-flex flex-row-reverse bd-highlight">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="collapse navbar-collapse row " id="navbarNav">
-                <ul class="navbar-nav ">
-                    <li class="nav-item  col-lg-3 ">
-                    </li>
-                    <div class="container"></div>
-                    <li class="nav-item logged-in " style="width: 200px;">
-                        <a class="nav-link" href="../../index.html" id="logout">Admin</a>
-                    </li>
-                    <li class="nav-item logged-in " style="width: 200px;">
-                        <a class="nav-link" href="/assets/html/edit-delete.html" id="logout">edit-delete</a>
-                    </li>
-                    <li class="nav-item logged-in " style="width: 200px;">
-                        <a class="nav-link" href="/assets/html/upload.html" id="logout">Upload</a>
-                    </li>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+            <div class="container-fluid d-flex flex-row-reverse bd-highlight">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse row " id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item  col-lg-3 ">
+                        </li>
+                        <div class="container"></div>
+                        <li class="nav-item logged-in " style="width: 200px;">
+                            <a class="nav-link" href="../../index.html" id="logout">Admin</a>
+                        </li>
+                        <li class="nav-item logged-in " style="width: 200px;">
+                            <a class="nav-link" href="/assets/html/edit-delete.html" id="logout">edit-delete</a>
+                        </li>
+                        <li class="nav-item logged-in " style="width: 200px;">
+                            <a class="nav-link" href="/assets/html/upload.html" id="logout">Upload</a>
+                        </li>
 
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</div>
-<div class=" p-5 grey-box">
-    <div class="pt-5"></div>
-    <div class="container bg-white p-5">
-<h4>Cargar Trailer</h4>
-<div class="border-bottom line"></div>
-<div class="mb-3 col-lg-12 formulario">
-    <label for="exampleFormControlInput1" class="form-label tre " id="">Titulo</label>
-    <input type="text" name="title" class="form-control " id="title-admin" required placeholder="">
-</div>
-<div class="mb-3 col-lg-12">
-    <label for="exampleFormControlInput1" class="form-label tre ">Genero</label>
-    <input type="text" name="gender" class="form-control " id="gender-admin" required placeholder="">
-</div>
-<div class="mb-3 col-lg-12">
-    <label for="exampleFormControlInput1" class="form-label tre ">Año</label>
-    <input type="number" name="year" class="form-control " id="year-admin" required placeholder="">
-</div>
-<div class="mb-3 col-lg-12">
-    <label for="exampleFormControlInput1" class="form-label tre ">descripcion</label>
-    <textarea class="form-control" name="description" id="description-admin" rows="3" required placeholder=""></textarea>
-</div>
-<div class="mb-3 col-lg-12">
-    <label for="exampleFormControlInput1" class="form-label tre ">Url img</label>
-    <input type="text" name="img" class="form-control " id="img-admin" required placeholder="">
-</div>
-<div class="mb-3 col-lg-12">
-    <label for="exampleFormControlInput1" class="form-label tre ">Url video</label>
-    <input type="text" name="url" class="form-control " id="url-admin" required placeholder="">
-</div>
-<button type="submit" class="btn btn-primary" id="botonAdmin">Publicar</button>
-        <button type="click" class="btn btn-danger" id="botonAdminCancel">Cancelar</button>
+        </nav>
+    </div>
 
-    </div>    
-</div>
-    <!-------------------------------------------->   
+    <!-- CARGAR TRAILERS -->
+ <div class="container">
+      <div class=" p-5 grey-box container row row-cols-2">
+                    <div class="container bg-white p-5 col">
+                        <h4>Cargar Trailer</h4>
+                        <div class=" line"></div>
+                        <div class="mb-3 col-lg-12 formulario">
+                            <label for="exampleFormControlInput1" class="form-label tre " id="">Titulo</label>
+                            <input type="text" name="title" class="form-control " id="title-admin" required placeholder="">
+                        </div>
 
-    <div class="container cosa">
-        <div class="row row-cols-1 row-cols-md-5 g-4 p-4 pelis2 " id="uploadId">
-<button type="button " style="border:1px white "  class=" " data-bs-toggle="modal" data-bs-target="#modalPeli${peli._id}" >
+                <div class="  row row-cols-2">
+<!--                     <div class="container col ">
+ -->                        <div class="mb-3 col-lg-6">
+                            <label for="exampleFormControlInput1" class="form-label tre ">Genero</label>
+                            <input type="text" name="gender" class="form-control " id="gender-admin" required placeholder="">
+                        </div>
+                        <div class="mb-3 col-lg-6">
+                            <label for="exampleFormControlInput1" class="form-label tre ">Año</label>
+                            <input type="number" name="year" class="form-control " id="year-admin" required placeholder="">
+                        </div>
+<!--                     </div>
+ -->                </div>
+                        <div class="mb-3 col-lg-12">
+                            <label for="exampleFormControlInput1" class="form-label tre ">descripcion</label>
+                            <textarea class="form-control" name="description" id="description-admin" rows="3" required placeholder=""></textarea>
+                        </div>
+                        <div class="mb-3 col-lg-12">
+                            <label for="exampleFormControlInput1" class="form-label tre ">Url img</label>
+                            <input type="text" name="img" class="form-control " id="img-admin" required placeholder="">
+                        </div>
+                        <div class="mb-3 col-lg-12">
+                            <label for="exampleFormControlInput1" class="form-label tre ">Url video</label>
+                            <input type="text" name="url" class="form-control " id="url-admin" required placeholder="">
+                        </div>
+                        <div>
+                        <button type="submit" class="btn btn-primary" id="botonAdmin">Publicar</button>
+                        <button type="click" class="btn btn-danger" id="botonAdminCancel">Cancelar</button>
+                    </div>
+                    </div> <!--fin div que contiene cargar trailer -->
+                        
+                    <!---------------CARD----------------------------->   
+
+        <div class="container col text-center">
+            <div class="g-4 p-4 pelis2 " id="uploadId">
+                <button type="button " style="border:1px white "  class=" ">
                     <div class="col  ">
-               <div class="card lg-3 tarjeta ">
-                 <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoGBxUUExYUFBQYGBYZGhscGRoaGh8fIBoaGhkaGBkfISAfHysiGh8oHxoYIzQlKSwuMTExGiE3PDcvOyswMS4BCwsLDw4PHBERHDAoISgwMDAwMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAuMDAwMP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQMEBQYHAgj/xABOEAACAQIDAwkDCQUFBAoDAAABAhEAAwQSIQUxQQYTIlFhcYGRoQcysSNCUmKCksHR8BQzcqKyQ1OTwuEkY9LiFRYXNFRzg7PT8USj4//EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACIRAQEAAgIDAQEAAwEAAAAAAAABAhESMQMhUUFhIjJxE//aAAwDAQACEQMRAD8A0q03VlYdgCx37/6aNs30THYAR/MR6CmyvmaFvWrhmACpnukMRP2adIYO/L3GR6g/hXBLHTQF2Pmse6R8cq+ppNBbY7oPHo/ig/zUWLvXJGVpHbA8yY66VnojNK6bx0lnxEDzome7Z8FmoI2Vbc867s2Y6dhDEeYqO27s5riysF0MqCYLD5ydIsDmBI1AAOU8Kd3boGhuW2O8cNN05Zj1oxiXUa2zlnKPrGYEKADTtnVE32iNl4jogNMRIJKNxjVTcUyNxATQipxHgcAOvVfTKo9aisRihZuZijor++uQ792cZSerpCRO/QyGkMNftn3GUyAZVokHcQOkx76MPXoZe/aO5YYTncK7ASbZW4CNfcMtqsn3S3zqG1GDpbcE9JFMyNZE+6Sf6amLoB96CCCDm6joRLEnyFROGslLJsk/ujlBnfbOtttWAMrpuOqt1UZ47GGWi2B0UQQO9YnyKU6e0WEMQw7l/wAyH+qmuzpjQ+Qn1XKPM07YTpvPn8VaPOjCejy7CAFAAdY4Atp1e7nTzpElWMFlJE6OiufK2ysPu0oH4BGHkfL3iPIV29/gzeDECfBo/pq5ZUapFrhERv4BLhB+5cyr8a5YNAziP/Nsz/NbyqD40u1vTcR3Egf5VPkaTS0RqDHaPzXm/iaoturQDe4Z6+bcN/K4MedQW2MeC7XCVZLBItqdM9+Idtd/Ng5BHzmfcVBp3tfaBCXCOkbanMxjotHQRWZf3jEqB04EzO6qJy22pzNlMPbuGAvS16LsZLtrnQyxJ6Lg60r/AA5FQ2/tFr146GSdF4z5a1Z+S/JrNDXdT9E8P141HcidhG43PMs78q7p89K07B4IKNRAHbA8JGX1FF+Q/wCkMLstVEEMvZqfQT/TT9Laj5ydmaB6dCaWt2oAhTHYGUfet51PnStq9wVs3YrJ+ec1UxRcg5vKJyAg8RI/OithdxVhv4A/DU8N1C5bCySgHWelbP3pn0roICJDEr3hx5uJ8qrREnw6HiAeAMjj1EdlVrl7gGtJZxKTmssTPWF+UXw6Lj7Rq1lzHzSOOjL6kkelQ3LKwpwdz5MRv6JUj3Wnfl4UaJKYPFhwI8CD+evrThrh4tp2j8CDPnVI5EbXLIqm5EaENG8afOEnzq6pJIDaSRqAd0+Px404miZwfo9+q/A0lfbKNxHbmie7MKdECTEbtIG7hvpLIV1By9eoE/D8atJPMTuzjTU6N65xr4URBO6T2FNY/i1jzHfXZkkHotHYp+Arh04sinXqPwnSqia5yMN2b1Md5jX71NzcUkyq5uuBP8ug86XKLM9IeE+o1FFczEe+D1Cc39YHxq4mm2detv8AGP8AxUKVyt2fcT86FPSUrLSSImCMxGv3tT56VziAzWyGZlneQVkdzEDL38KJb27oOD16ED1BH3aF/pdE5X6gQGjjulSPCvL29DRvc2hbML0iW3BNSQnvGRpEkCTod1ObVgDpAFDx4f8AKfCKCwCYyKYgwDMd+cfCuCikybZPbmY+gb8aJ/T/AOA9lc2qlSY1BgnjvkTw3T20qmzCuqOy9QBAjzUg798E/hxcC7lZk7F107UYGfKkkw86oRPXb6B8VGYE+FVJJei3bO3WIu3bY1uNH1kB/mSI8RUAuJOdhcFtkJkCYU7ySWyg2yTxEzxHGrEmOZdGdtPpIV821U/y032tg7WItlWWQ3UQfQ6H1pZz9lPG67gYK0p0tXGtvE82w9RB6S9oJHbR4vC3EPOnpBVIcLvZN5gQDmUyRqd7DjVSt4R8KciItzDgyUcsSpG4qZhD1wRUzs7bLMPkbjjd0LyF1nq5xWzR3k+NGOeOtdDLDI/t3AIYgwdQei0qdQfebvnSnKFXIYMTlmBMjXsBg6AbwYqrYjHvYvKL9rNauvNs23QhHg/JGYgE5mUtG9hwqcba8f8A42IJ6jbBjf1XIA06o1FPEVJspPAnsIMeQgedJWnJ0kTr0RG7hIXMfWou7tQxH7M4nr5pB2zNz9QarHKf2ltbXm05q5c4qkXFTveMk6MIXNGlaT2izS7Yq/bsq1xyltF952hAPHfUDs7lXZxly5bw10hUAL3CCHKtIHNhgSBIjOSI6tQax7bO27+JbNfuFo1VdyrIjoqNF0476S2Ptp8NdW7bJLCQy8GQ6Mp65GveAeFacPSOXtq/KfaqW1S1Z0AuBjBM9HNdnWSSXVJaRNZriy2IxGWc2Y6kceuYJnxNTm1FN62LqlGQW3eRpILW1Ghy669ZpHkZgxzrXGbKBoCykjzjL61lGul65O4NUQKBEDdE+iwB4k1YLMH3W14QYP8AJ0vNqZbMKMBle0+mmVhO/hBqSaw30nWOEZx5afE1WKMiZVVksUU/SaF9R0vN6UgkQ0nqk5vINzpom54DelwcRnNsx2DUHxI76VtAsNUKz9LIf6Q3xq4muB0Y0I7uj/S6f00dy1rJ38CwQnzZVP8ANSxSNFPgAf8ALLH0rlbYB3R3EqfLVj51ROVUiNPGHH4XF9ag+XFwGwEGpuNl3htIhtd46JJ3fN4VPc3ropBPGBPoCx8xVN5Y4w3bjBOnkBtoBqWJ1utqDCgaSTGp10MK+oJ7qB5F3SL1xddTMd/Yw/KtJwmghY/hHR9NVPfIqgcmNmvbJdQGJjjFsDtbXnD2ICv1xwsBwty50blx3n+zSUTd9BDLDT55as+ejyiaxO1LNolLl1FY/MLjNPUAoMnumm+J29at6kMexUaf5lWolUs2CEzWrZEfJqQW7ubtgt6UntHGWyJy3QDxNvm/S81s0XyVOkl/1ht8bF7/AA7f/GDQ/wCn7O9ufXvt3D/QXqIO3LP0X/xcN/8APSi7RQiebvx1raFz/wBm459Kc8t+xNx/ics7TsOQFxK5juVmCt924AZ8KdXMO/X5gfgF+NVYY2xd6AuIxj92wKvHGbdxQ3pRJhMmtlmtEcFPR+4ZX0mtcfIzqy8y3WPun/5KFQi7Uvjettu3PdWfAMYoVpziFxS7mM5lY9jDh3a+FdnXQrp3SPhFNm1EMLbeO/7yxXKWE/uI7VKn4NNefLa9HRdUWNJP8JPpDV1l7D+PnNJMVGs3R/iH8DXSXgd17zK+oKzTmiuygGkcOoz+M+lG1nNvGvWNCO4iD8aIBo3k92X8QaIjgc/mAPRvwqiI8ywJGdGHVcEHr95fyrpcLmXUKG0koQRu4TrA8DSiKi7oHe2+u3uDj4R/pNEkLdR2P2aCpHQud4Gbw1HlVS21ybgyjMhJ93gdJ1V9DpOvZV5dZ+a3j+Zpvir3NoztnyIJOUFyI6kWWnu1qbhu+mkz12za8mIS2bb21e1oDBg5RuiSVkbxB311Y2hcU2kuMotMwCO9vMApIEggZhBYDT3eOmtMuVHtGLsyYW2qKJHOOil3YHdlYEIunzpY9lcYf2jJiE5rH2ARuz2dCNIByEyrCTDIdJjL11j4r+ll5PjT9lbPt21DK7XCwBDs5aVInoySAp36E95qG5RchsJiZZrfNXDrzlqFJPWRGV/ET21Xth7RuWOnhb64jDMzM4Y6IXLOA6xnw7ksFzQUhZIJMVbNl8qMNiLZuC6tuFzMt0hCq7y0kwyajpDrG7dW0mumNv1mPKT2cYqwC1mL6CfcBFwDtt/O0HzST2CqVcslTBBB4gggg9Ub57K1flL7TFWUwahzu55wcg/gXfc7zA7DWeYrEvfvG7duM9x/edjJP4AdgECq5aEx2sPJcsuDxKsyP8kcqEAsma7aLTv3zIHDXrqwcicIRbXKchYksYK5RrHzgWkwIkcT1VRdrOApy7hlkdYgDt4gGtO5EueZQBuA0zEfExWOXtpPUWE4TDGBde2Wb+9RQSOoMIPq1LrseyrdFbiCNGt3ejHaCZ8gaXts8QZjqKiD6QaCW7Y0yIO5Qs+QAq5IztDmyNFvs8cIVjHbvPwpHEtaVoKKW6lR575QEU4uWgSDOo3TDflHnS2d54Hs1H4a+JNVoGNjGWCSq+91DM507D0/5adKRuBWeoEqfGVmurhVtHRY6mGn4AeVMdr41MOBlbM5gKgMyTqBru0DHsAJOgpdES29tPmbZERcforAVjJ6gPeO/edIJOUCRB4fZ0gc4JAAi3MqNZljpzrEmSSInUAHUuLdoljcuHNcO88FH0V+iug74kzTgVhnnyuoetIzlByhs4VVN0gswLKkwMoOXMxAJ1MgKokxvA1qjbU9oty70bSSp4NKJ4W0aX/9R37hxde1jZhNyxiDOTJzTfVZCWXuzKTr1qap3dCjrPH8TW3jwxs2m06u7axTDKbzW04Jai0sdQS2B61FvaXUkyTrJE69pJpZnUdZ79PQa0mb4B0AHcB8eNbSSdJcMidnktBAAQV0I4gQR3EGaBxH60oi44geVUS08hNo372Nw1m5de5ba5qrsXAARiSM2qkAE6VoWFuZ0n6zgHrCuyg+IAqiezG1kfE4sDTD2GyDru3ehbH9Q8RV82bhebtW0knIqrJ3kgQT4nWs7JL6RkUy0K7ihS0haRc+sG/huT6ECe6jA4x45F/ytI8hTcq5PvK/A85bDeEgqR3RR5oGtsd1tindpoPWuPcejqnKvGs+bMI4aZl0n8aN7hYbs3YMrD+oE03GK+rcXv6UdWqq06fWoJiUIEsk8cyqpPmSaqFordsWzBe2vcVI+Ejt8K6GQdFcqHgqvH8v+lcoCNwMxIhjqY7ZgeB3105gbyJ3ZkDemWe3fTkKugpHzniewf05Z8qJjv6XrJ9GB66jtu49rFk3LeHa+30LSDMe33ywAiNFJ7Kx7bPLfGXruY3Ws82ejatEoEOvvDe2mhz6b9IMVcxtLbb+gNyg9pzTr2lieA40M/aayzYXtXdIXF2ucH95ahWjtQkKx37ivdV92Lyjw2KE4e8rmJKTDr3oYYd+7tq+Ok2kuUHJTC4qTdtDOf7VIW52dKOlH1gRWe7e9lmISThrgur9BoW53D5j+a91aLyg5R4fCLmv3IJ9y2utx/4VkSPrGF7azXlPy4v4mUQmzaOmRGOdx/vHEQPqLp2mnLoa2p2E5+xeJtFrd22xViCQQQYZWO6J0js3VIPezsGuAFurcvD3QP3Z0jQR3Uggy7tB1DT4V01w7qLltUwkL/saOAAxUn6UZZ/XadBrSKbLuIdBM8QdPzHlU3sDk41whpydxgmrnhOSFsjW2Cd+YHLqe1SPgankelYsciXbD3bje8EmOsDpHv0BPhVl5Bn5FFI1GhGu8aGpDA8knt/usTcTf0S2YGZmYyZh0uI4DWKisHg8Th8RcspcskBhCvbcyMoMypMzoZ7+NItr7hrZA0OnVwnu/wBKXsAyREAbyDEmJ3DTdFRuFu4iBmSwe1Wf4ZNKcZrsf2Y7+cPoAs+dXEUrfEndPlunuFFjL1u0uZ7gReJaB+EHzpoMJff3sSqDqtIqHUzGa4blJ38Fh7BzlQ9wbnusXYT1M85fsxTI02jt66bZawvN2+F68CoOhMom9gACS0QFDGdKjdl4Y/vHzFiDlz+8qmJLdTvlUsOGVV1yyTxGMOJvf7tdT1GGj1uIR2CyRqHppyv29+yWA6qr3n0RWBIGsSVBBYsQwAncjNrEHDK3K6itaTOWuwKoezOXmItkHGWF5s/OtKAy9Zyg5WHWNO+rvgMZbvILlpw6Hcy7u48VPYdam4XHsrdkNsbNXEWXsvuYbxvUjVWHaDB8xxrGtrYC7ZutauiGU7xuIMEMp3ZWEERW5iq9y15OHE289qBeX3DpqJ1SeEz0TwbT52m3jy16TWS/ske8Qvfp6b/OK55tRwY+ED1/Onhw+Wc0ggmZ94HiGJjIesGD2UiwHUD5sfGYA8q6UG5K/RHif9a5zL9GO4j9etKMB1DyX8qmeQuwhisUquALNsc7eY6BbaasJ3dI9HUbs3VQFz5PbI5jC4XDx8pfYYu8CNRbSBYQ9XSyNB4q1WSmuAuG61zEsIN0gop+ZZXS0scOj0iOBc13icQltXu3TFq0ue4eJA3IPrMdB49VZs8runlnBOwDBJB3H9GhWKbX2/isTeuXhcdA7Sqq5AVRoqgToAAB4UKrirg9DCTGVCe5QQO+I9JoG440YfeBjzOlJ3bfE2gO8kHwJGvhFdrdMe80fWafVpHpXnvQdLe7PHh5xFdc4I1/L/SuGt5tzAfZ/EdGPs1Acs8bjbNv/Y7AufSuCGKDiRagZu8A91VMbU2xPthkJnm7cjjkAI7jE+VdWuj7pI4bz+def021iVvNeN+6t+ekSzBp6mG6PqxA00q2bB9rNxejirQuAfPtQr+Kk5G8MtbTx66Z3LbVZqM23sDDYkRiLKuYgPEOB2OOkO6Y7KS2HypwuKHyF9S0TzbHK4HHonUjtEioflL7Q7FmbeHi9d1kg/JId3Sce+fqpPeKclLtWeVPsv5m216xiEFpdWGIIQjqi4BlJ3QCBM8apGDwzaNmKxuYSDP1eI7zHdUztfat7EuLl64XYe6NyJ/Am5e/U9tMmu0+d/DmH0pcuFiSWZ2b3nZ8zt3sTJpG4ev4a0eHwzXTCJPbwHjVn2JyMGjXCT5x/rUW67Xr4g9l7JuXz0VIHWR+FXHZHJNLcElS3GTBqe2bsRFAhY7TwG4cdN53U+5rJqxQLoJ5wrJjQQwK+vCl7o3o0wuAyjc0DfA08wCY8qlcIo+j5MSfug/gaAIXXI4HWpB7t0/CunxS/OuR2XVyg+cA+tVIi3Z9ZI4N4HpfhPxqJ5T4U6YhSkoArhgVOSTBJgmEk/N0DMeFOReBEgIY4g7u6N3hFE+KuAaLcZfq9MR/C3SAqkDwm0jlGa1cgaSE5xfBkBceK9VOTtG2ASAxHGCpjvDMI8RNU+3ty5hn5qGCE/Jkqe8poZldQN+nXBpbG7d50ZlQltwYMw6z71sZl16wN9Gz0mtobeAG6B2wp8gfxqqY/aT3XCWmCljvzSF3AExwBIrm5aZj7sb9ZbiZ6ynmDTixscgELq9yFB4hTpcMiNcjXIiIKiss8vS8Yk9hYZci71D6yd62wsLPattRPaGNUHHbU/bMa9+It29LancJUADsyoFntzHjV05Z404fBX7kZWKi0s/7wnPH/pq4+1WYYZzbs66kySessSW/EeNaeKd1nke47GZ3kbhooPXrH4k9p7K75O469Yc3LDZRHSU+64mAGXrJ0HVJ76h79zSJ36HsJ94/rrpzexRS2FWA7adxI07oT1c1vqWIa1yf2zbxVvNbMMNHSZKnce8Txp+QNx1B8iKx/Yu0WwzJctGCvDgVG+Rxk9fbWqbH2smJtC4n2l6j+v1pWOWHEt7V/llyTXEfK24W9wJPRuHcFuHhc4Lc4+62sGsyxFm4rMjgo6mGVgQyniCN4rcyvlxHX+dRm2eStnELmvISAAEYHLd3xlVoPOIBJhwY4HgLwz16pbY1+zsSADLEgACSSSYAHWSTurUdj7B/ZrC4Hfeu5buNYa5bf9nYnt4jqz/SFPNg8mMPhX52zbdrwBCXLzK3NkjeqIqjN2k6VJbO2cLan5Q3LjHNcdtGuOd5PA9QAOgAAGlVct9JtFdMCqF7WNrGbeBQxEXb3bcYdBD/AAJBjrY1f7jqs3LnuWla4/8ADbBYjxgDxrC8djWv37t5z0rjs5n6xmPDd4U5Cxn6RyiipwpH6FCrW9JWwFjKjJv0ElZPx8K5w+IzdIc2wkjMnWDBEiY3dfDdWOcpuW+IxWZEHNWW/s7cgsPrsIz7twgbxrvqB2dtS9h3z2Lr2m45G0PePdbuINcWPidVzehc3hPV+taOayzYftZdYXF2g4/vLUK3ihOVvAr3VdcFyzwVy2bq4m2FUSwc5WHD3D0jrp0QafCxPKU823yfw+KHy9lXMQH91wN+jrDDu3dlZVy95GWcIQLOJzOfdsOJuAEwTK6BY4uF7zuqc5Se0O5dJTChrNvjcYDnW/gGotjtMtr82qfMkmSSTLEklmPWxOrHtNVMuI4bMLGzQurkE8BMDz407ZI3CI3RwHduoXR1+unxp3s/Y128eiCq9v8A91Nyt7aTGTpHnqGp4AD8qmtkcmXuENcOVeon9elWjYfJRbQBMFu0a+k1Z8PhAv0R6fDWlvfQ6ROyNipbUBQD3fkalrdsKYI13wej5TE+tOlwk6i2jdoIU+ZB/Cm+J2UxVwpZSQcoEkBogNCtrBO+OEwd1LiXI7FvoDKsEkanTSYJkiI/GKLZt1XQPJWLjDXo+7v13mQc0z87fpSjYMW0IVYiAzEhmYw05yxKgSB19QjdQtXTpBYqBlUqoynSDAQQBI8AK01pnsqiqTOZh/Dpqdd2ulAoOAjsBI9AY8gK4XEaGCD2SGn8vumiA61I8PypjRG9YEzlAP0gIb7wINNrmH1EHz/5tfI07cqBq2XtzQPU0w2htqzY/e4i2k6jMwUkdgOrDTeJoBDaWBz2yrAEbxq66jUEGSJBEyNaj9nXwWFu+q84TCXAFUXN8KYWBcjgfeiRxUOMDy2wl68li1dzO5IEK0EgE74G+OvfFL7e2QHBIVTp0lYaMOoifgZ0GoijRbPLGAYEE3fvpIHVqqDzpDH4rm7oUdLMN6gkAWwJ7RPPDyqJwHKa7hgeczXbCDWT8vZEgEsSYvWxvzSGA97tk1xiX7xvW2zIyypgjeVUiCAQQUgg9VZeSdKxvao+1fHF7GGt8Lly4x7rfNqP6rnlVMutuHWfx/5atHtZuTdwi9Vu4fO5c/IVVc2oj18TXR4v9WeXZBpZwN/4zofSK6u3Jeeoad7/APLHpSS+9O78IWgp6Z/iHoK0QdNciAP1Gg/E+NTXIvb5w98SYtuYYHcCYAPZwk9x4VXGbT7I+FKWELMFAlmOVQN5YmAB2kwPGnZuaJvOHVdXcaDcv0m4Du4nypO65Y5mOvwA4AcB2Ulet5XCHVkt21c/XCjN60227jTZsO6gF9FQHcbjsLdsHszET2VhE07LjuoNWf3Fwtu9at4otev3BJZgzwWYKugPQkzCqNAB11dtn7P5tGysxtiOgxJKSY0J1C6jQ7vhUTYZ8qkdsHiUQSzWmHEsQIYqNY1jqk1i4tDKCI3T6gEduvpW9KNR+v1v9Kp+O5L2cQpunDvaLkkPYdX0JkG5abLJ6+bMmeO+tIMctM28KFWxuQy8MZbH8di+reIyGD4mhT2vlFbtOZ0Ouvl+jSF1uGsUpiLyqJkEGcumuhG/q479fSn2ztnoYZiH4gQcvX9rxrHKzGbrfHG5XUMcJgHu6qIX6R3b/U91S1nZ6W9d7fSO/tjgKlGEjhTdhrA39QI+FYXyXJ0TxzEzbSlMJgnvGEWe2NKndlcng3Sulo6lAPwPxq27FtYdYFskkcBZuyPEKy+tLfwX+oDYfIxRDXBJ8fhVrwWzlQQpIHUcsfzD4UNr8osNhAv7Q72y85AUYlgNDAymBqBqKQ2By5s4y9zOHS4xClmdxlVFECd8kkkAADjwqphai5ydJm1hmABKKRwIDr6qSD5UsjE6QCOosPgUHxo+ZO8Pl/gWPiSPSm21rtu3ae7eZ2W2jMSXIMAbhkjXgO0itJizuUOHwVvimvXlGnmCKStMoJVbhMbxlbT/AA1idPnCsK2vtzE3rrzduAOxy21cgAMTlQQdYkLWy8j9ijCYW3Z+f7109d1gM+vECAo7FquCbklTcc/NLgadIhN3URBy/Z11qK5W7dXC4c37ltWgqqoWDF3bcoLW53AmZJhTUq1ysl9rO3eexAw6tKWfe7bre/8AdEL35qrULdqRwntFxOKvWrFizbRrjBQWJu5VOrEhoACqGaB1Vo1vDqo3se9j8AQo7gKzv2QbEhbmLYatNu3/AAgg3G7ZMJ9lq0LPRqFa7yqskBV4kwB2kk76wXlhts4vFXb/AM0nLbk7ra6L5+8e1jWle0/bvMYU2lPyl+UHZbH7w+MhPtnqrIxb0nhTEjrA3zbu23G9XU+tb3sHaaYi0pMg94In7WvlNYBzJYhViTu1H51qHILFEZhO4/riJ31GS8YtG2dgBumnvA+8vWNPHqg1Dck8LzIuWTPRe5E9RcOO3dcFXOy3RBMqesrBPpPrUFjbWTFv9dQe8soB8haFZeTo4ovtaT5XCHrt3B9243/F61VGOo48PTd6VfPalgGezYvKCTZZy8CYR8kt3AjU9tZ6t0EqAQxmABqTw4b618d/wRl24Q6/riONFm1J+sP5lqdwfIvGXALhtczb/vb7C0oHbn6R3Dcp31N7K5I4Uak3Mc2mloG1ZEbpvN0rg4Tb8qvlIlWNi7Dv4u5zeHtlyIzMeiqCBq7SQgiTvJMaTV75ObHtYZv9nKYjFCQ2JI+RsHcRbUn5W5vE8OtfdMuuzndBbulLdge7h7AyWxu98+9dMjjAPEU+tqqrCgBRoANAO6pue+k13hLBS0oNxrjdLMzRLGZkwANZ9DXONw4uJlPWrD+JGDr6qKK0zMcqAs0jT8+rvNKZj+v1rSiKb2uTNpr6YgWZuoCFYCeGUHQgEgaAndE1K4mLaFBGZiCRvygagd5MHwpkvea5YVUhWiuXgil2MBVLseoKMx+FI7JBWxaDe9kXN3wCfWag+V/KnD4YG1cVrtxwPk1aIWQwzNwmNw66h/8AtTH/AIHTsvP+VXE8bYvubtoVRf8AtUtf+Cuf43/86FUXDJnS3I7Qd466c7LMMYcr9XLmLdcSQJ8RTLwqwf8AVkfsAxnPAmTNoI3RQOLctcmFJMQsagisrr9dk+xw+3lXQLcbvZUH3QrHq+dUjyZ2vfv37diwqWucaC4BZlQCXbpEqYUMdw4VVHaYnf19nD1+Naj7Hti83afFMNbvQt9ltT0z4uAPsHrqbjjJ0fPK/rRLeGtLqLak9bAM3mZNLNij1/6fgBTM3TVV9p23eYwjIp+UvTbXsSPlT5EL9ulBWc8vNvHGYy5dBm2vydv/AMtCRP2iWb7XZWj+yzYn7Phedf8AeX4ftFuPk18izfbHVWXcltlrfxFu3cZUtTmuMzBQETVhJIEnRR/F2Vq+N5bYG2YbE2yeq2GfTgJQFfWrqVo56s99sO3ItphVOrxcuR9BSRbU97jN9gdddYr2p4RfctXbnVoqjzLEjyrO9v7dbE37t51ALmQJJyKNEUaCYUATx1PGiQll9meyf2jEi84lLENPXc/s17SDLz9QTvrWAGO4E+FYLsvlRirFs2rF420LZiFVZLQBOYgtuAET+NNsdtfEXp56/duA7wzsR5THpQNNt29ygt4azcuNctl0U5UzrJfcgiZjNv6gDWIXr+ZiXeWZiWaJkkyW036knSmgWjy0xI0oe0vDYe1bs4bD3XW2oRS7rbBCjVtAxJJk8N5qOxntZxB/dWbSfxZnPxUelUaKMUxo/wBt7fv4q5zl58zAZRCqoCgkgAARvJ1361HMCd5J7zNdRRUDTrDNkdG6mB9dfStF5INF5hl37jEwd2gkTu66zh91a57O8tyzOk6cQDqJ476jNWN9Ve9niEHTCzvlYnwlhTLlVh8vNXssBSQToARvJ0+rn/Rp7gyyjRSQeII/pnXwrvFYUXbbpC5mGgK5TI3DUA67vGozx3j6EuqhbqZuJUgyGUwVI4g/oHUGaa28HfB0xdxQd/N2rFsnvZLQNd4C7KQd40M75H5iD406VqxxvwZGCbCshucdTdffnus1xgewuTl8Ip+Wrm7cAFQnKflJYwQ+Wl7pErYUwx3QbjD92Oz3j2Vc3WdTLHos0hUX3nYhVXvJ+G/sqobc9ouGs9GypxL/AEtUtg/1v6CqTyh29icaQ954tg9C2uiIOxR8TrUaloAfCt8fH9LSZ2py1x+IBBvFLf0LQCKPBd9P+RXKW9bv27T3ma3cYKQ5kAsQo7tYEjdOugqrMsERvow5HYeHfwq+MDa3/aSzgGyqq7KFKOxhTAJIuDUiDuG+jw+AvO9sXb/RzqClpOaUywGplnOn1oo8FjedW1eG6/Zt3ftAZLg8OiPCnaPDKeplPkwNKRlaxjbjl8ZiXb+9uAdgVyoA7gAK6w5Db9AP1A7T10XKGyUxmKU6Rfu/1sR6U3t3OHD9fr49txZ4xXsFHTdbw4Sf120KokMWjSj53SO2eoUkFNdqlZNhq44zHZ1cfGtBb2qBEW3YwgVEUKme4T0VEDRVEGO2s8K10qilZKc2tmL9puOf3Ht2x9S2p9bmY+UVAbV2xfxDBr117jKCAWO4EyQI0Ammc0cikHBSjC0C1GHpgIrquc9c5qYKE0K4Vq6TU6b+oUAdCpTBcmcXd1t4a6R1lco82gGpnC+zbGEZrnNWl4m5c/4QfjRxqblFSNCrxh+QWGAJu48NlEsti2bhA4noliB25af4Pk1s7mudt2MTiVhmBLrbLqvvFELW3cCD7qmnxpcozilsJg7l0xatvcPUiM3wFXz/AKbsWL1i1Z2dh0N5bTI7HnGVLxGWZQHMBqRmPfTDb/tBxqXr1i3dS2tu46fJ2wMwRysw+fLunQ0ag5WouxyFx7qW/Z2UAFumyKYAk6M2bd2VZvZZjkForcNvL/vFUjQni27SKpeN5Q4m9+8xF1hxGcgeQgelWP2TYsreZQSO6eI7COo1OWtelY7/AFqmHTDseiqsf91fYfy85HkKfhEGgu3F7Lqgie9kDEeNN2VLgh0R54OAT8AfWjt7PUarduWtBojuqjuV86geVTBUXtLDc1dD5kdbs62wQoYRwJJEz18eyugaf4vYDXFIOKuET8+3aYaGd6BDUPZdwzW30dNG7eojvEGT/wDWGeHG/wAVvcQfLnlWcEiJa1xNwZlY6i0klQ0fOdoMdUTWX80zlrlxizsZJJkknWdd9aB7ReTj32W/bBZ7dvKyD51tJMr9ZRMrxAkbiKoOby4GujDWkO7V+O+hcsgyU8VpFwD3/rdRISNd46wf161oQkEnjPVRlCKXW6CBu8f1pXL5eEjuP4H8KA0zkRic2BwpnW3dvWT2BgLqjyy1Y7o0NU72dv8A7HcAJOXG2jr9e3kq4vSjDPtl3tDsZdo3jwuBLg+3bUn1BqGFrdmgdnEiePUKuXtSwsfs18aSrWnP8B5xP5WbyqjBv1+t9U0xu4eftXVMcOHxFCmfif14UKe6NGYc8NO6uZoKpJgCT1DWpXA8lsXe/d4a6R1lCo+80D1rNttE0dW/Cey/HMJcWrQ67lwafdDU8w3IPCqwF7aKMxMBLCc4zHeQMuZiewL4UaLcUOjNaFtPZmysFkF2xi7jMCy84MkgGPdJQqP4lp/sHa2Fexir+FwNq2+HQModQ5cEMSSYzD3TuY09Fcma4TZ926YtWnuH6iM3wFTeD9n+PuRGGZZ4uyr6Ez6U6xntJxziFuJbHVbtr8WzHyp9sflPduYPF3LwF25ZW2Va61xwxu3ltkNbz82QFzQMtHoW03/7N2t/95xmGs9heWHgcvxp4nJDZ1sTcxN+6Q6IRat5Vzv7qZipXMerMDGu7Wj2p+xLgRhDdtc9aW3elV33SZvJzi6PK3AAo3c34DjlLyswt68rgXPkcSty3kHQvW8yl2cOQVu9GAY3QNwFP0n3S23bWzcGsDBc5czFcr4hSykb8yqzhYOkEb6irfLxrX/d8NYtdsFz8QPSm/LHlMuLIypdADu4Ny7mgP8ANVFRVQDTXU6CTVcpWnMfrRtq8oMRe2RbxKXmW4t4pdNs5JBzwIWI32vOs9xOJa4ZuOznrdix8yZq4ck/ldlbQs8Ui6B3KGn/APV6VS5oox/V42Jyus2MNhbRL5ktYnMyFwbdx2uc30JFtzDKZYNFMl5VWRzN9bNz9qtWBYTprzS5bbWxciMxMMTk0EmZPGpzR0bHGJzF8qMwslcPaW5ZW0q3OmzxZy5N75R7uvR4mmm2dvX8UQbzhsuYgBEQAtq2iKJnrM1HE0JpbPQVYeQOIyYpdxngd2+Oo/S6qr00/wBh3sl+2e2D4g/jFKnG/Wj0RK6H6LiPukr6CnAI0MOvUcpg/cAHnTbZ5lFMnUcRI/mp3bT6IHgin+gT61MFGt0E70J6jCn0maitv4NjFy2gFxeEjpqd6nj2g8D2TMubrRlJgdhPwP5Uk9kRqvlI+BWfOqslidoHC4lbq8QQdQdGRhrB4qw0IjsO461blZyNF1jctZUvMdVPRt3j1g7rd09XusdRBJqa27YNp+eslQ24gkw4G4NvmNYOaRJjeaW2Xti3iFZfnAdO00Egcex0+sNOuDpWfG40tsdxOGdHa26srqYZWBBU9oOopPNH+tbPtvk3avW154Z9OjrFy2p3BLkGRxy3Aw14VQdo8inYn9luLeH920W7wjf0GOW5HWjHurSZbG1TczRhj1mlcXgrlpst1HtGd1xWU+TCaRyVZtB9m5P7He7cXhh+Pwq7sap3ITDMmCtSP32MLr227VkjN3Z9Jq30Rhn2iOWWz+fwd5AJZYup/FaBJA7ShcVkimRO/wDXVx8TW4BjP51QcfyQsi63+1Jh0JJKXEYwCZi2yjLcHUCQRpNM8MvxTs/6n/WhV8s7B2YABzWOux/aAKobtCkggdUjdG/fQpq5xJ39s3rGD56zh7VkG0t1Oaw5uWxm1ytdVwFaDJJQKDpJNRvKnbuJAxFkXcUb1jJnu22S3bzOyqQVVFYKcxC9NmJE7t1MflG/Mm0luzbzILb3EthbjoIkMwPGBmIALcZpvjttX7yql2/cuIsZVZyQI0G86kDQGs/TVpu3cPbt4yxzttUspiVzXLq2/dVWOj3LrXXEjflVdB2VCbO5VYS3+zXRmRv2h7160iGEdrHNkprBVmGYCZGYjcKz9zMk6knUnj10ZNPZaSvKXHWbrobIgBYb5G3ZEzwW2ST3sxNT3skuBsRew7e7essp8CP8rPVLqd5A4zmsfh2+k+T/ABAUHqwol9nekNetlCUb3lJU96mD6iuamOW+F5rHYhOHOFh3XALg/qqGpXs4OimgaBoAUU0KAoC4+yi5mxF6wdVvWLiEHjqv4Fx41UblsqxU71JB7wYPwqa5BYzmsfh24G4EPdcBt+mYHwpLlZgSmOxFsAk86zAAT0XPOLpv3MKf4n9Q9GKlcFyVxl33MNdjrZCo+88Cpmz7NMXGa61m0vE3LmgHH3QR6ijVFyioUdXNeSmz7f77aSueqyobyjPPfFF+27GsmFsYi+R864QoPgGX+mnxLkps04t2XQLdNtwgYdLKY3zExGsGrT/1+S1/3XZ+HtH6TLmaO8BT5k1F7e5aYrFobd115skHIqKBI3a6t60ag3fjYuS1/NYtkETHZOmnWT6VMF24z9oH/Miiql7N8bnwqdJ9Bwg/GrQHG/NHfaj+ms4qlhe/QZQP5WPwoiw3keMf8YiuTdP01PeX/GKNG6iv2WT8JJ86qJI4uzmU6yO78RmFULlLsIhs6ZgymVZTBU9h0I8K0W6pjpA+X4sx+FR+PwgYdnj/AMoq9I3pnmH5aXlHNYkFxuFxVGccJK6K/wDLu41aNnYnDYhFS2Uuqo0Qj5QdptvDzOsrPXNQfKPkzm93X4jyB+NUvEYJrbQ4Oh0J4HhrvBqLgfqtWOHMZExNxQAfkruW4sdRS8CQOwEUwfk+hInCYC4eHyT2p8LblW8qqGz+UWJQALibhX6Nwi4vlcDAeEVKjlZeYQ1rDv322X/27q/CnMaVliz4bAXDcF28yFlQJbt2kyW7SSDlRZkTAnrgdQp2SBuFVG5yuvATzFr/ABL49OdqOxHLu+dOYsd5W8/9V2PSq1Yi42rrdxCTqwJ6hqaPGXVtpnuslpODXSEnuB1fTqBrOsRywxbAhbxtA7xZRLXqi548ahrt1mbM7MzHezMWJ7yTJpj/AM/rQ25WYMGM2IbtSwMp7szqY7wKOqNbxGg0o6Y4z4rdHQoVi6QoRQoUwMV3h7pR1cb1YMO9TP4UKFAW32t2f9sS5wuWkfyJX4BaqB30KFO9px6FUvsbkricTrZtgr1l1HxM+lFQpHek/hPZhfn5W9ZtiNYzu3kFA/mru7yZ2bh4GIxd1mOkW7eWTu4o0edChVyM91M38Dg8Li1w1nAm7fgMrPc04wZYkCInReGgpxjNvYy3duh0w2GtpbS7cuw91stwhbcBSM7E6QVERqRpR0KYQ/KHFYvm79xsc7ILVi7ZNoc0HS++XpgDMI6WhJ76X2jyZsNztps5uNcsWrDs7MVuXMOb3SJnou4ynTTNPChQoCRWw1vn2sOuHt29oM1woMoFm3bTMmVF6Q+rEGsv2xiVuX7txBCPcdlXqVnZlHZAIoUKWQwN7FosQF1J3d/jVlwvs7xryxtoggnpOvAT83NQoUY4ynnlZ0tnsbxU22SSIJ1BgxPXv6uNaArp/esTPzlDa97BjQoVB0ZI3i6PufgFFFat3GMRaccDDT3dLd50KFNLt8MwmbWWADmDgKQTHAs0+FEFZuLec/E/hQoVcTTXEWw2+PFfyioHaXJxLoJAB7tPQijoVUTVUx/JJlJKmO8io79juL1HuMUKFVqCWjZjGq+tRuNTrFChU1UMWGsaz26/jStnBO26POjoUof4kbfJ+4QN3pQoUKvjGfKv/9k=" class="card-img-top" id="imgCard" alt="...">
-                 <div class="card-body">
-                   <p class="text-dark titulo" style="font-size: 15px" id="titulo-card"> TITULO:</p>
-
-        </div>
-    </div>
-
-
-    <!-------------------------------------------->   
-
-    <!--------------searchbox--------------------->   
-
-    <!-------------------------------------------->   
-
-    <!--------------Form--------------------->  
-    
-  
-
-
-
-
-
-
-    <!--------------Form--------------------->   
-    <!--------------Form--------------------->   
-<!-- 
-    <div class="pb-5"> </div>
-    <div class="container">
-        <h3 class="  pt-3 text-center ">Cargar Trailer</h3>
-        <form action="" class="logged-in row col-lg-12 align-items-center formularioPost">
-            <div class="container-fluid mt-5 ">
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Titulo</label>
-                    <input type="text" name="title" class="form-control " id="title-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Genero</label>
-                    <input type="text" name="gender" class="form-control " id="gender-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Año</label>
-                    <input type="number" name="year" class="form-control " id="year-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">descripcion</label>
-                    <textarea class="form-control" name="description" id="description-admin" rows="3" required placeholder=""></textarea>
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Url img</label>
-                    <input type="text" name="img" class="form-control " id="img-admin" required placeholder="">
-                </div>
-                <div class="mb-3 col-lg-12">
-                    <label for="exampleFormControlInput1" class="form-label tre ">Url video</label>
-                    <input type="text" name="url" class="form-control " id="url-admin" required placeholder="">
-                </div>
-                <button type="submit" class="btn btn-secondary" id="botonAdmin">Publicar</button>
-                        <button type="" class="btn btn-danger" id="botonAdminCancel">Cancelar</button>
-
+                        <div class="card lg-3 tarjeta ">
+                    <img src="https://previews.123rf.com/images/jemastock/jemastock1610/jemastock161003771/63998265-rollo-de-pel%C3%ADcula-y-el-icono-de-la-tablilla-pel%C3%ADcula-de-cine-de-pel%C3%ADculas-de-v%C3%ADdeo-y-el-tema-de-entretenimie.jpg" class="card-img-top" id="imgCard" alt="...">
+                    
+                <div class="card-body">
+                <p class="text-dark titulo" style="font-size: 15px" id="titulo-card"> Titulo:</p>
             </div>
         </div>
-    </div>
-        </form> -->
-     <!----------------------------------->
-    <!--scripts-JS-------------------------------->
 
-    <script type="module" src="../index.js"></script>
-    <script type="module" src="/assets/js/upload.js"></script>
+
+        <!---------------CARDFIN----------------------------->       
+
+    </div>
+ </div>
+   
+        <!-------------------------------------------->   
+
+
+
+        <!-------------------------------------------->   
+
+        <!--------------searchbox--------------------->   
+
+        <!-------------------------------------------->   
+
+        <!--------------Form--------------------->  
+        
+    
+
+
+
+
+
+
+        <!--------------Form--------------------->   
+        <!--------------Form--------------------->   
+    <!-- 
+        <div class="pb-5"> </div>
+        <div class="container">
+            <h3 class="  pt-3 text-center ">Cargar Trailer</h3>
+            <form action="" class="logged-in row col-lg-12 align-items-center formularioPost">
+                <div class="container-fluid mt-5 ">
+                    <div class="mb-3 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label tre ">Titulo</label>
+                        <input type="text" name="title" class="form-control " id="title-admin" required placeholder="">
+                    </div>
+                    <div class="mb-3 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label tre ">Genero</label>
+                        <input type="text" name="gender" class="form-control " id="gender-admin" required placeholder="">
+                    </div>
+                    <div class="mb-3 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label tre ">Año</label>
+                        <input type="number" name="year" class="form-control " id="year-admin" required placeholder="">
+                    </div>
+                    <div class="mb-3 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label tre ">descripcion</label>
+                        <textarea class="form-control" name="description" id="description-admin" rows="3" required placeholder=""></textarea>
+                    </div>
+                    <div class="mb-3 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label tre ">Url img</label>
+                        <input type="text" name="img" class="form-control " id="img-admin" required placeholder="">
+                    </div>
+                    <div class="mb-3 col-lg-12">
+                        <label for="exampleFormControlInput1" class="form-label tre ">Url video</label>
+                        <input type="text" name="url" class="form-control " id="url-admin" required placeholder="">
+                    </div>
+                    <button type="submit" class="btn btn-secondary" id="botonAdmin">Publicar</button>
+                            <button type="" class="btn btn-danger" id="botonAdminCancel">Cancelar</button>
+
+                </div>
+            </div>
+        </div>
+            </form> -->
+        <!----------------------------------->
+        <!--scripts-JS-------------------------------->
+
+        <script type="module" src="../index.js"></script>
+        <script type="module" src="/assets/js/upload.js"></script>
 
 
 </body>

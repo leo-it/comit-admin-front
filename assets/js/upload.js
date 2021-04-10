@@ -23,3 +23,10 @@ inputImg.addEventListener('keyup', (e) => {
 
     imagen.src = valorInput2
     })
+
+
+    /* boton cancelar */
+  const btnCancel = document.getElementById("botonAdminCancel")
+  btnCancel.addEventListener("click",()=>{
+      window.location.reload()
+  })
