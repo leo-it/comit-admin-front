@@ -1,35 +1,48 @@
-import { getMovies } from "./js/requestPeliculas.js"
-import { postAdmin } from "./js/fetchAdmin.js"
+import { searchFilters } from './search.js'
+
+import { getMovies } from "./requestPeliculas.js"
+import {postAdmin} from "./fetchAdmin.js"
+searchFilters(".card-filter",".tarj");
+
 const URI_DB = "http://localhost:8000/api"
-    //getMovies(URI_DB + "/movie", dibujarAdmin)
- getMovies(URI_DB + "/movie", dibujarAdmin)
-        postAdmin()
+//getMovies(URI_DB + "/movie", dibujarAdmin)
+getMovies(URI_DB + "/movie", dibujarAdmin)
+postAdmin()
 
 
 //dibuja los trailers cargados y el modal
 export function dibujarAdmin(movies) {
-    let peliHtml = document.getElementById('movi');
+    let peliHtml = document.getElementById('editTrailer');
     peliHtml.innerHTML = "";
     for (let movie of movies.reverse()) {
         peliHtml.innerHTML +=
             `
-           <h5 class="card-title text-dark" required> Titulo: ${movie.title}</h5>
-           <p class="card-text text-secondary" required> Genero: ${movie.gender}</p>
-           <p class="card-text text-secondary" required> Año: ${movie.year}</p>
-           <p class="card-text text-secondary" required> Descripcion: ${movie.description}</p>
-           <p class="card-text text-secondary" required> ${movie.img}</p>
-           <p class="card-text text-secondary" required> ${movie.url}</p>
-           <p class="card-text text-secondary idPeliculas" id="${movie._id}">id: ${movie._id}</p>
+            <div type="" style="border:1px white "  class=" tarj" data-bs-toggle="modal" data-bs-target="#modalPeli${movie._id}" >
+            <div class="col  ">
+             <div class="card lg-3 tarjeta ">
+         <img src="${movie.img}" class="card-img-top" alt="...">
+         <div class="card-body">
+           <p class="text-dark" style="font-size: 15px">${movie.title}</p>
+           <p  class="card-text"style="display: none" id="genero">Genero: ${movie.gender} </p>
+          </div> 
 
-           </div>
-           <button type="button" class="btn btn-danger botonDelete" id="${movie._id}-btn-eliminar">Eliminar</button>
+       </div>
+   </div>
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="${movie._id}-btn-editar" data-bs-target="#modal-${movie._id}">Editar
+   </button>
+
+   <button type="button" class="btn btn-danger botonDelete" id="${movie._id}-btn-eliminar">Eliminar</button>
+
+   </div>
+  
        </div>
        </div>
+
+
+
      
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" id="${movie._id}-btn-editar" data-bs-target="#modal-${movie._id}">
-Editar
-      </button>
+
       
       <!-- Modal -->
       <div class="modal fade" id="modal-${movie._id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -91,15 +104,14 @@ Editar
         //console.log(movie._id);
         const boton = document.getElementById(movie._id + "-btn-eliminar");
         //console.log(boton);
-        boton.addEventListener("click", function() {
+        boton.addEventListener("click", function () {
             console.log(movie);
             fetch('http://localhost:8000/api/delete-movie/' + movie._id, {
                     method: 'DELETE',
                 })
                 .then(res => res.text()) // or res.json()
-                .then(res => console.log(res)
-                )
-                .then(res => document.location.reload()) 
+                .then(res => console.log(res))
+                .then(res => document.location.reload())
 
         })
     })
@@ -114,10 +126,10 @@ Editar
         const description = document.getElementById(movie._id + "-description-edit")
         const img = document.getElementById(movie._id + "-img-edit")
         const url = document.getElementById(movie._id + "-url-edit")
-            //console.log(movie._id);
+        //console.log(movie._id);
         const boton = document.getElementById(movie._id + "-guardar");
         //console.log(boton);
-        boton.addEventListener("click", function() { //captura el evento submit
+        boton.addEventListener("click", function () { //captura el evento submit
             console.log(movie);
 
             console.log(movie._id);

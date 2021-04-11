@@ -3,7 +3,6 @@ export function postAdmin() {
     const urlDBPost = "http://localhost:8000/api/post-movie"
     const title = document.getElementById("title-admin")
     const description = document.getElementById("description-admin")
-
     const gender = document.getElementById("gender-admin")
     const year = document.getElementById("year-admin")
     const img = document.getElementById("img-admin")
