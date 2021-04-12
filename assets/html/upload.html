@@ -86,38 +86,37 @@
     </div>
     <!-- CARGAR TRAILERS -->
     <div class="container logged-in">
-        <div class=" p-5 grey-box container row row-cols-2">
+        <form class=" p-5 grey-box container row row-cols-2" >
             <div class="container bg-white p-5 col">
                 <h4>Cargar Trailer</h4>
                 <div class=" line"></div>
                 <div class="mb-3 col-lg-12 formulario">
                     <label for="exampleFormControlInput1" class="form-label tre " id="">Titulo</label>
-                    <input type="text" name="title" class="form-control " id="title-admin" required placeholder="">
+                    <input type="text" name="title" class="form-control " id="title-admin" required >
                 </div>
 
                 <div class="  row row-cols-2">
                     <div class="mb-3 col-lg-6">
                         <label for="exampleFormControlInput1" class="form-label tre ">Genero</label>
-                        <input type="text" name="gender" class="form-control " id="gender-admin" required
-                            placeholder="">
+                        <input type="text" name="gender" class="form-control " id="gender-admin" required >
                     </div>
                     <div class="mb-3 col-lg-6">
                         <label for="exampleFormControlInput1" class="form-label tre ">Año</label>
-                        <input type="number" name="year" class="form-control " id="year-admin" required placeholder="">
+                        <input type="number" name="year" class="form-control " id="year-admin" required >
                     </div>
                 </div>
                 <div class="mb-3 col-lg-12">
                     <label for="exampleFormControlInput1" class="form-label tre ">descripcion</label>
-                    <textarea class="form-control" name="description" id="description-admin" rows="1" required
-                        placeholder=""></textarea>
+                    <textarea class="form-control" name="description" id="description-admin" rows="1" 
+                         required></textarea>
                 </div>
                 <div class="mb-3 col-lg-12">
                     <label for="exampleFormControlInput1" class="form-label tre ">Url img</label>
-                    <input type="text" name="img" class="form-control " id="img-admin" required placeholder="">
+                    <input type="text" name="img" class="form-control " id="img-admin" required >
                 </div>
                 <div class="mb-3 col-lg-12">
                     <label for="exampleFormControlInput1" class="form-label tre ">Url video</label>
-                    <input type="text" name="url" class="form-control " id="url-admin" required placeholder="">
+                    <input type="text" name="url" class="form-control " id="url-admin" required >
                 </div>
                 <div>
                     <button type="submit" class="btn btn-secondary publicar-btn"
@@ -149,7 +148,7 @@
                         </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 
     <!--carrouseles fuera-->
@@ -254,6 +253,8 @@
 
     <script type="module" src="../js/upload.js"></script>
     <script type="module" src="/assets/js/firebase.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
 </body>
 

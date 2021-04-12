@@ -28,6 +28,6 @@ export function postAdmin() {
                 "content-type": "application/json"
             }
         })
-    window.location.reload()
-    })
+  
+     }) 
 }

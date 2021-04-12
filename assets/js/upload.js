@@ -1,10 +1,12 @@
+import {postAdmin} from './fetchAdmin.js'
+
 let inputTitulo = document.getElementById("title-admin");
 const tituloCard = document.getElementById('titulo-card')
 let inputImg = document.getElementById("img-admin");
 let imagen = document.getElementById('imgCard')
+postAdmin()
 
-
-
+//renderiza lo que escribo en la card
 inputTitulo.addEventListener('keyup', (e) => {
     let valorInput = e.target.value
     inputTitulo = valorInput

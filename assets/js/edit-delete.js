@@ -1,8 +1,15 @@
-import { searchFilters } from './search.js'
+import {
+    searchFilters
+} from './search.js'
+import {
+    getMovies
+} from "./requestPeliculas.js"
+import {
+    postAdmin
+} from "./fetchAdmin.js"
 
-import { getMovies } from "./requestPeliculas.js"
-import {postAdmin} from "./fetchAdmin.js"
-searchFilters(".card-filter",".tarj");
+
+searchFilters(".card-filter", ".tarj");
 
 const URI_DB = "http://localhost:8000/api"
 //getMovies(URI_DB + "/movie", dibujarAdmin)
@@ -17,7 +24,7 @@ export function dibujarAdmin(movies) {
     for (let movie of movies.reverse()) {
         peliHtml.innerHTML +=
             `
-            <div type="" style="border:1px white "  class=" tarj" data-bs-toggle="modal" data-bs-target="#modalPeli${movie._id}" >
+            <div type="" style="border:1px white "  class="  tarj" data-bs-toggle="modal" data-bs-target="#modalPeli${movie._id}" >
             <div class="col  ">
              <div class="card lg-3 tarjeta ">
          <img src="${movie.img}" class="card-img-top" alt="...">
@@ -111,8 +118,14 @@ export function dibujarAdmin(movies) {
                 })
                 .then(res => res.text()) // or res.json()
                 .then(res => console.log(res))
-                .then(res => document.location.reload())
-
+                .then(res => {
+                    Swal.fire({
+                            title: "Se elimino correctamente",
+                            icon: "success",
+                            position: 'top'
+                        })
+                        .then(res => document.location.reload())
+                })
         })
     })
 
